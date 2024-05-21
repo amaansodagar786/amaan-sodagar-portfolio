@@ -8,10 +8,12 @@ import About from './Components/About/About';
 import Project from './Components/Project/Project';
 import Resume from './Components/Resume/Resume';
 import Footer from './Components/Footer/Footer';
+import Contact from './Components/Contact/Contact';
 
 
 function App() {
   const[Loading,SetLoading]=useState(true);
+  
 
   useEffect(()=>{
     SetLoading(true)
@@ -23,7 +25,7 @@ function App() {
   return (
 
     <>
-      {Loading ? (
+      {/* {Loading ? (
       <div className="loader"> 
         <HashLoader
           color={'#9067C6'}
@@ -33,7 +35,7 @@ function App() {
           data-testid="loader"
         />
       </div>
-      ):(
+      ):( */}
       <div>
         <BrowserRouter>
         <Navbar/>
@@ -42,7 +44,7 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/project' element={<Project/>}/>
-        <Route path='/resume' element={<Resume/>}/>
+        <Route path='/contact' element={<Contact/>}/>
 
         
         </Routes>
@@ -52,7 +54,8 @@ function App() {
       
       
       </div>
-      )}  
+      {/* ) */}
+      {/* }   */}
     </>
   );
 }

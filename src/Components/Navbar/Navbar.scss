@@ -1,4 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
+.active
+{
+  background-color: #8a35bbc8;
+  border-radius: 5px;
+}
 .Navbar{
+  background-color:#01111aea;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,6 +48,10 @@
   }
   
   .NavbarLinks li{
+    font-family: "Mukta", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+
     padding: 2px 20px;
     list-style-type: none;
   }
@@ -61,18 +74,19 @@
     color: #ffffff;
   }
   .NavbarLinks a::after{
-    background-color: #ffffff;
+    background-color: #8b68ad;
     content: "";
     position: absolute;
     height: 3px;
-    left: 5px;
+    left: 45%;
     bottom: 0;
     width: 0px;
     border-radius: 2px;
-    transition: 0.3s;
+    transition: 0.4s;
+    transform: translateX(-50%);
   }
   .NavbarLinks a:hover:after{
-    width: 95%;
+    width: 75%;
   }
   .Hamburger{
     display: none;
@@ -111,32 +125,15 @@
       padding: 5px;
       padding-right: 7%;
       cursor: pointer;
+      font-size: 1.5rem;
+    }
+
+    .Hamburger:hover {
+      color: #9067C6; 
+      
     }
   
-    // .bar{
-    //   display: block;
-    //   background-color: #E7E7E7;
-    //   border-radius: 50px;
-    //   height: 2.5px;
-    //   width: 30px;
-    //   margin: 6px;
-    //   transition: 0.5s;
-    // }
-    // .barOne{
-    //   rotate: -225deg;
-    //   position: relative;
-    //   top: 4px;
-    //   transition: 0.5s ;
-    // }
-    // .barTwo{
-    //   display: none;
-    // }
-    // .barThree{
-    //   position: relative;
-    //   bottom: 4px;
-    //   rotate: 225deg;
-    //   transition: 0.5s;
-    // }
+  
     
   }
   

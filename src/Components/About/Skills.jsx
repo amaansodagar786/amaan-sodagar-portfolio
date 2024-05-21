@@ -1,9 +1,9 @@
 import React from 'react'; 
 import "./Skills.scss" ;
 import { CgCPlusPlus } from "react-icons/cg";
-import {FaReact,  FaGitAlt, FaGithub, FaNpm, FaFigma, FaBootstrap, FaHtml5,} from "react-icons/fa";
+import {FaReact,  FaGitAlt, FaGithub, FaNpm, FaFigma, FaBootstrap, FaHtml5, FaJava } from "react-icons/fa";
 import {DiNodejs, DiJavascript1} from "react-icons/di";
-import {SiExpress, SiMongodb, SiPostman, SiVercel, SiCss3, SiPython, SiArduino} from "react-icons/si";
+import {SiExpress, SiMongodb, SiPostman, SiVercel, SiCss3, SiPython, SiArduino  } from "react-icons/si";
 
 const Skills = ({skill}) => {
     const icon = {
@@ -23,7 +23,12 @@ const Skills = ({skill}) => {
         Html: <FaHtml5/>,
         css: <SiCss3/>,
         python: <SiPython/>,
-        arduino: <SiArduino/> 
+        arduino: <SiArduino/>, 
+        Java :<FaJava />,
+        
+        
+
+
     }
     
   return (

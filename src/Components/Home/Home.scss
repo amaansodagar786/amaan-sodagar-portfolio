@@ -1,3 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
+
+.btns {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.btns button {
+  border: 1px solid white;
+  font-family: "Mukta", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 25px;
+  border-radius: 15px;
+  height: fit-content;
+  width: fit-content;
+  padding: 7px 7px;
+  // border: none;
+  background-color: #1C1C27; 
+  color: #fff; 
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btns button:hover {
+  background-color: #eaeaea;
+  color: black;
+  border: 1px solid black;
+}
+
+
 .HomePage{
     display: flex;
     justify-content: space-evenly;
@@ -21,9 +53,12 @@
   }
   
   .illustration img{
+
+    margin-top: 40px;
+    
     border-radius: 50%;
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
   }
   
   @media(max-width:900px){
@@ -40,6 +75,9 @@
     .illustration{
       margin: auto;
       margin-bottom: 50px;
+    }
+    .illustration img{
+      margin-top: 50px;
     }
   }
   
@@ -58,11 +96,23 @@
       font-weight: 500;
       font-size: 24px;
     }
-    .illustration{
+    .illustration {
       width: 300px;
       height: 300px;
       margin-bottom: 0px;
     }
+    .illustration img {
+      margin-top: 50px;
+      width: 270px;
+      height: 270px;
+    }
+    .Avatar{
+      width: 300px;
+      height: 300px;
+      margin-bottom: 0px;
+      margin-left: 70px;
+    }
+     
   }
   /* ABOUT */
 
@@ -70,7 +120,7 @@
     display: flex;
     justify-content: space-evenly;
     min-height: 80vh;
-    margin-top: 100px;
+    margin-top: 70px;
     align-items: center;
     padding: 25px;
   }
@@ -94,7 +144,8 @@
   }
   
   .Avatar{
-    width: 280px;
+    width: 300px;
+    height: 400px;
   }
   
   @media(max-width:900px){
@@ -116,7 +167,30 @@
     }
   
     .Avatar{
-      width: 200px;
-      margin-bottom: 75px;
+      width: 300px;
+      margin-left: 200px;
+    }
+  }
+  @media(max-width:500px){
+    .AboutPage{
+      display: block;
+      text-align: center;
+      padding: 30px;    
+    }
+    .AboutText{
+      text-align: left;
+      display: inline-block;
+      width: 95%;
+      line-height: 24px;
+      letter-spacing: 0.6px;
+      margin-bottom: 80px;
+    }
+    .AboutTextHeading{
+      font-size: 26px;
+    }
+  
+    .Avatar{
+      width: 300px;
+      margin-left: 20px;
     }
   }

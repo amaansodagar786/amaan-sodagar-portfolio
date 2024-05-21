@@ -1,11 +1,12 @@
 import React from 'react';
 import Skills from '../About/Skills';
-// import Tilt from 'react-parallax-tilt';
-// import Lottie from "lottie-react"
-// import Coder from '../LottieFiles/coder.json';
-// import Coder from '../LottieFiles/coder.json';
-import "./About.scss";
+import Tilt from 'react-parallax-tilt';
+import Lottie from "lottie-react"
 
+import "./About.scss";
+import webani2 from '../Lottie/animation.json'
+
+  
 const About = () => {
   return (
     <>
@@ -13,18 +14,22 @@ const About = () => {
         <div className='AboutText'>
           <h1 className='AboutTextHeading' >Get to <b>know</b> me!</h1>
           <p>
-            Hi, my name is <b>Naman Jain</b> and I am from Chennai, India.
-            I'm a <b>FULL stack web developer</b> and a school student pursuing <b>in grade 12 </b>. <br /><br />
-            I am interested in learning <b>new languages</b> which can help me with my projects and increase my skills.
-            I love to create projects with beautiful designs, you can check out some of my work in the projects section.<br /><br />
-            I am <b>open</b> to new collaborations or work where I can contribute and grow. Feel free to connect with me, Links in the <b>Footer</b> section.<br />
-            Apart from coding I love to play videogames, and travle.
+          Hi, I'm Amaan Sodagar. and I am from Vadodara, Gujarat , India. <br /> <br />
+            Recently I've Completed my B-Tech in CSE From parul University , Vadodara with 7.98 CGPA.
+            <br /><br />
+            I've Completed my Diploma in Computer Engineering from Shree KJ Polytechnic , Bharuch with 7.98 CGPA.
+            <br /> <br />
+            
+             I'm a FULL stack web developer and currently doing an internship in V-Ex Tech Solution as Full Stack developer.
+            
           </p>
         </div>
 
         <div>
-          <div className='illustration'>
-            Hello
+          <div className='animation'>
+          <Tilt>
+                    <Lottie  animationData={webani2} />
+                </Tilt>
           </div>
         </div>
 
@@ -38,39 +43,62 @@ const About = () => {
           <p className='exp-text firsttext'>Full Stack Developer</p>
           <p className='exp-text'>V-Ex Tech Solution</p>
           <p className='exp-text'>Jan - Apr (2024)</p>
-          <span>
-            As a Full Stack Web Developer, I played a key
-            role in building an e-commerce website. My
-            responsibilities included creating the frontend
-            interface, developing backend functionalities,
-            and designing an intuitive admin panel for
-            streamlined management. this experience
-            enhanced my proficiency in web development
-            across various technologies.
-          </span>
+          <p className='exp-text'>(Works on E-Commerce )</p>
+          
 
 
-
+    
         </div>
 
       </div>
-      <h1 className='SkillsHeading'>Professional Skillset</h1>
+      <h1 className='SkillsHeading'>Professional Skills</h1>
       <div className='skills'>
 
-        <Skills skill='python' />
+        
         <Skills skill='React' />
         <Skills skill='Node' />
-        <Skills skill='Git' />
-        <Skills skill='Github' />
+        <Skills skill='MongoDb' />
+        <Skills skill='Express' />
+        
         <Skills skill='Javascript' />
         <Skills skill='C++' />
-        <Skills skill='arduino' />
-        <Skills skill='Npm' />
+        <Skills skill='Java' />
+        
         <Skills skill='Html' />
         <Skills skill='css' />
       </div>
-    </>
-  )
+
+      <h1 className='SkillsHeading'>Education</h1>
+      {/* <div className="maineducation"> */}
+        <div className='education'>
+          <div className='education-box'>
+            <p className='edu-text firsttext'>Parul University</p>
+            <p className='edu-text'>B-tech Computer Science</p>
+            <p className='edu-text'>CGPA - 7.61 </p>
+            <p className='edu-text'>2021 - 2024</p>
+          </div>
+        
+
+        
+          <div className='education-box'>
+            <p className='edu-text firsttext'>Shree KJ Polytechmic</p>
+            <p className='edu-text'>Diploma in Computer Engineering</p>
+            <p className='edu-text'>CGPA - 7.98</p>
+            <p className='edu-text'>2018 - 2021</p>
+          </div>
+        
+
+       
+          <div className='education-box'>
+            <p className='edu-text firsttext'>New Sunrise School</p>
+            <p className='edu-text'>GSEB</p>
+            <p className='edu-text'>Passing Year - 2018</p>
+            <p className='edu-text'>SSC - 69%</p>
+          </div>
+        </div>
+        
+      </>
+      )
 }
 
-export default About
+      export default About
