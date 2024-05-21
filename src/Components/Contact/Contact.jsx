@@ -23,10 +23,10 @@ const Contact = () => {
 
     const handleSubmit = async (values, { setSubmitting, resetForm }) => {
         setLoader(true);
-        alert(JSON.stringify(values, null, 2)); // For debugging
+        // alert(JSON.stringify(values, null, 2)); // For debugging
 
         try {
-            const response = await fetch('http://localhost:3035/contact', {
+            const response = await fetch('https://backnd-portfolio.vercel.app/contact', {
                 method: 'POST',
                 body: JSON.stringify(values),
                 headers: {
