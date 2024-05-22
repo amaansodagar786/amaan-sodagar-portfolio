@@ -53,9 +53,9 @@ const Home = () => {
                 </div>
 
                 <div className='illustration'>
-                    <Tilt>
+                    
                         <img src={mypic} alt="" />
-                    </Tilt>
+                    
                 </div>
 
             </div>
