@@ -15,7 +15,7 @@ const  Projectbox = ({projectPhoto, projectKey, projectName}) => {
             <h3>{projectName}</h3>
             
 
-              <button className='projectbtn'><FaGithub/> Github</button>
+              {/* <button className='projectbtn'><FaGithub/> Github</button> */}
             
 
             

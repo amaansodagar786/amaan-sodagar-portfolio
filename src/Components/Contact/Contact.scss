@@ -173,7 +173,7 @@
     color: whitesmoke;
     
     margin: 0 0 20px 0;
-    z-index: 2;
+    // z-index: 2;
     font-family: "Mukta", sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -185,7 +185,7 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-    z-index: 2;
+    // z-index: 2;
 
     .inputField {
         width: 100%;
@@ -218,7 +218,7 @@
 }
 
 #button {
-    z-index: 2;
+    // z-index: 2;
     position: relative;
     width: 60%;
     border: none;
