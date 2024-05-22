@@ -25,7 +25,7 @@ function App() {
   return (
 
     <>
-      {/* {Loading ? (
+      {Loading ? (
       <div className="loader"> 
         <HashLoader
           color={'#9067C6'}
@@ -35,7 +35,7 @@ function App() {
           data-testid="loader"
         />
       </div>
-      ):( */}
+      ):(
       <div>
         <BrowserRouter>
         <Navbar/>
@@ -54,8 +54,8 @@ function App() {
       
       
       </div>
-      {/* ) */}
-      {/* }   */}
+       ) 
+      }   
     </>
   );
 }
