@@ -24,13 +24,7 @@ const Home = () => {
         Navigate('/contact');
     };
 
-    // useEffect(() => {
-    //     if (location.pathname === '/') {
-    //         setActivestate('home');
-    //     } else {
-    //         setActivestate('');
-    //     }
-    // }, [location]);
+    
 
 
 
