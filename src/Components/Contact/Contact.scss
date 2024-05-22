@@ -76,6 +76,12 @@
     width: 40%;
     text-align: left;
 
+    @media(max-width: 500px) {
+        width: 50%;
+        
+    }
+
+
     .SocialHandles {
         list-style: none;
         padding: 0;
