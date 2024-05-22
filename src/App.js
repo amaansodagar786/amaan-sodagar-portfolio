@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import HashLoader from "react-spinners/HashLoader";
+// import HashLoader from "react-spinners/HashLoader";
+
+import RingLoader from "react-spinners/RingLoader";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './Components/Home/Home';
 import Navbar from './Components/Navbar/Navbar';
@@ -26,15 +28,15 @@ function App() {
 
     <>
       {Loading ? (
-      <div className="loader"> 
-        <HashLoader
-          color={'#9067C6'}
-          loading={true}
-          size={100}
-          aria-label="Loading Spinner"
-          data-testid="loader"
-        />
-      </div>
+      <div className="loader">
+      <RingLoader
+        color={'#9067C6'}
+        loading={true}
+        size={80}
+        aria-label="Loading Spinner"
+        data-testid="loader"
+      />
+    </div>
       ):(
       <div>
         <BrowserRouter>
