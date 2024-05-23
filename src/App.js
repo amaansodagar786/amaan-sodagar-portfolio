@@ -11,6 +11,7 @@ import Project from './Components/Project/Project';
 import Resume from './Components/Resume/Resume';
 import Footer from './Components/Footer/Footer';
 import Contact from './Components/Contact/Contact';
+import Gototop from './Components/Gototop/Gototop';
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
       ):(
       <div>
         <BrowserRouter>
+        <Gototop/>
         <Navbar/>
 
         <Routes>
@@ -47,6 +49,7 @@ function App() {
         <Route path='/about' element={<About/>}/>
         <Route path='/project' element={<Project/>}/>
         <Route path='/contact' element={<Contact/>}/>
+        
 
         
         </Routes>
