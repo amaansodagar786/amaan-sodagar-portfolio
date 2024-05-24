@@ -9,6 +9,8 @@ import mypic from '../../images/mypic.jpg'
 import webani from '../Lottie/webdev.json'
 import Lottie from 'lottie-react';
 import { useNavigate , useLocation} from 'react-router-dom';
+import { useContext } from 'react';
+import Context from '../Context/Context';
 
 
 
@@ -17,6 +19,7 @@ const Home = () => {
 
     const Navigate = useNavigate();
     const location = useLocation();
+    const {hello} = useContext(Context);
 
 
 
@@ -39,7 +42,8 @@ const Home = () => {
             <div className='HomePage'>
 
                 <div className='HomeText'>
-                    <h1>Hello!</h1>
+
+                     <h1>Hello!</h1>
                     <h1>I'M <b>AMAAN SODAGAR</b></h1>
                     <Typed />
                     <div className="btns">

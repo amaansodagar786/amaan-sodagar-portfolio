@@ -33,6 +33,10 @@ footer{
     text-decoration: none;
     color: inherit;
   }
+  .footerLinks a:hover{ 
+   transform: scale(1.2);
+   
+  }
   
   @media(max-width:750px){
     footer{

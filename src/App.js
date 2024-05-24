@@ -12,6 +12,7 @@ import Resume from './Components/Resume/Resume';
 import Footer from './Components/Footer/Footer';
 import Contact from './Components/Contact/Contact';
 import Gototop from './Components/Gototop/Gototop';
+import Mycontextprovider from './Components/Context/Mycontextprovider';
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
       ):(
       <div>
         <BrowserRouter>
+        <Mycontextprovider>
         <Gototop/>
         <Navbar/>
 
@@ -55,6 +57,7 @@ function App() {
         </Routes>
 
         <Footer/>
+        </Mycontextprovider>
         </BrowserRouter>
       
       
