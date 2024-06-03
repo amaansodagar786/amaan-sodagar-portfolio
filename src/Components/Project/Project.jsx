@@ -16,12 +16,12 @@ const Projects = () => {
         <ProjectBox
           projectPhoto={scan}
           projectName="Scan Application"
-          githubLink="https://github.com/amaansodagar786/asistant"
+          githubLink=""
         />
         <ProjectBox
           projectPhoto={asistant}
           projectName="Assistant Application"
-          githubLink=""
+          githubLink="https://github.com/amaansodagar786/asistant"
         />
         <ProjectBox
           projectPhoto={ecommerce}
