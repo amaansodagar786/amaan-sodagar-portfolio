@@ -1,26 +1,43 @@
 import React from 'react'
-import './Project.scss' ;
+import './Project.scss';
 
 import ProjectBox from './Projectbox';
-// import chunkymonkey from "../../images/chunkymonkey.png"
-// import fashionstore from "../../images/fashionstore.png"
-// import starbattle from "../../images/starbattle.png"
-// import dict from "../../images/vocabulary.gif"
 import scan from "../../images/scan.png"
 import asistant from "../../images/asistant.png"
+import ecommerce from "../../images/ecommerce.png"
+import weather from "../../images/weather1.png"
+import weather1 from "../../images/weather.jpg"
 
 const Projects = () => {
   return (
     <div>
       <h1 className='projectHeading'>My <b>Projects</b></h1>
       <div className='project'>
-        <ProjectBox projectPhoto={scan} projectName="Scan Application"  />
-        <ProjectBox projectPhoto={asistant} projectName="Asistant Application"  />
-      
+        <ProjectBox
+          projectPhoto={scan}
+          projectName="Scan Application"
+          githubLink="https://github.com/amaansodagar786/asistant"
+        />
+        <ProjectBox
+          projectPhoto={asistant}
+          projectName="Assistant Application"
+          githubLink=""
+        />
+        <ProjectBox
+          projectPhoto={ecommerce}
+          projectName="E-Commerce Website"
+          githubLink="https://github.com/amaansodagar786/E-commerce"
+        />
+        <ProjectBox
+          projectPhoto={weather1}
+          projectName="Weather App"
+          githubLink="https://github.com/amaansodagar786/Weather-App"
+        />
+
       </div>
 
     </div>
-    
+
   )
 }
 
