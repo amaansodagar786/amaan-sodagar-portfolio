@@ -28,11 +28,11 @@ const Projects = () => {
           projectName="E-Commerce Website"
           githubLink="https://github.com/amaansodagar786/E-commerce"
         />
-        <ProjectBox
+        {/* <ProjectBox
           projectPhoto={weather1}
           projectName="Weather App"
           githubLink="https://github.com/amaansodagar786/Weather-App"
-        />
+        /> */}
 
       </div>
 
