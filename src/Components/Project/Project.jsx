@@ -5,8 +5,8 @@ import ProjectBox from './Projectbox';
 import scan from "../../images/scan.png"
 import asistant from "../../images/asistant.png"
 import ecommerce from "../../images/ecommerce.png"
-import weather from "../../images/weather1.png"
-import weather1 from "../../images/weather.jpg"
+import hroroject from "../../images/hrproject.jpg"
+
 
 const Projects = () => {
   return (
@@ -33,6 +33,12 @@ const Projects = () => {
           projectName="Weather App"
           githubLink="https://github.com/amaansodagar786/Weather-App"
         /> */}
+
+        <ProjectBox
+          projectPhoto={hroroject}
+          projectName="HR Management Project"
+          githubLink="https://newproject-xi-eight.vercel.app/"
+        />
 
       </div>
 
