@@ -42,7 +42,6 @@ const Home = () => {
             <div className='HomePage'>
 
                 <div className='HomeText'>
-
                      <h1>Hello!</h1>
                     <h1>I'M <b>AMAAN SODAGAR</b></h1>
                     <Typed />
