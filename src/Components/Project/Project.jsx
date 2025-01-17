@@ -6,7 +6,7 @@ import scan from "../../images/scan.png"
 import asistant from "../../images/asistant.png"
 import ecommerce from "../../images/ecommerce.png"
 import hroroject from "../../images/hrproject.jpg"
-import chatapp from "../../images/chatapp.png"
+import chatapp from "../../images/chatapp.jpg"
 
 
 const Projects = () => {
