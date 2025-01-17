@@ -6,6 +6,7 @@ import scan from "../../images/scan.png"
 import asistant from "../../images/asistant.png"
 import ecommerce from "../../images/ecommerce.png"
 import hroroject from "../../images/hrproject.jpg"
+import chatapp from "../../images/chatapp.png"
 
 
 const Projects = () => {
@@ -13,6 +14,11 @@ const Projects = () => {
     <div>
       <h1 className='projectHeading'>My <b>Projects</b></h1>
       <div className='project'>
+        <ProjectBox
+          projectPhoto={chatapp}
+          projectName="Real-Time Chat Application"
+          githubLink="https://github.com/amaansodagar786/frontend_chat"
+        />
         <ProjectBox
           projectPhoto={scan}
           projectName="Scan Application"
