@@ -81,7 +81,7 @@ const About = () => {
 
         
           <div className='education-box'>
-            <p className='edu-text firsttext'>Shree KJ Polytechmic</p>
+            <p className='edu-text firsttext'>Shree KJ Polytechnic</p>
             <p className='edu-text'>Diploma in Computer Engineering</p>
             <p className='edu-text'>CGPA - 7.98</p>
             <p className='edu-text'>2018 - 2021</p>

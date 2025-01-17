@@ -18,33 +18,36 @@ const Projects = () => {
           projectPhoto={chatapp}
           projectName="Real-Time Chat Application"
           githubLink="https://github.com/amaansodagar786/frontend_chat"
+          liveLink="https://chat-app-flame-zeta.vercel.app"
         />
+
         <ProjectBox
-          projectPhoto={scan}
-          projectName="Scan Application"
-          githubLink=""
+          projectPhoto={ecommerce}
+          projectName="E-Commerce Website"
+          githubLink="https://github.com/amaansodagar786/E-commerce"
+          liveLink="https://e-commerce-three-tawny-31.vercel.app/"
+        />
+
+
+        <ProjectBox
+          projectPhoto={hroroject}
+          projectName="HR Management Project"
+          githubLink="https://github.com/amaansodagar786/newproject"
+          liveLink="https://newproject-xi-eight.vercel.app"
         />
         <ProjectBox
           projectPhoto={asistant}
           projectName="Assistant Application"
           githubLink="https://github.com/amaansodagar786/asistant"
+          liveLink=""
         />
         <ProjectBox
-          projectPhoto={ecommerce}
-          projectName="E-Commerce Website"
-          githubLink="https://github.com/amaansodagar786/E-commerce"
+          projectPhoto={scan}
+          projectName="Scan Application"
+          githubLink=""
+          liveLink=""
         />
-        {/* <ProjectBox
-          projectPhoto={weather1}
-          projectName="Weather App"
-          githubLink="https://github.com/amaansodagar786/Weather-App"
-        /> */}
 
-        <ProjectBox
-          projectPhoto={hroroject}
-          projectName="HR Management Project"
-          githubLink="https://newproject-xi-eight.vercel.app/"
-        />
 
       </div>
 
