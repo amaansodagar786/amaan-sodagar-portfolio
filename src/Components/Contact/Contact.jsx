@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import './Contact.scss';
-import myimg from '../../images/my image.jpg';
+import myimg from '../../images/Myimage.jpg';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
