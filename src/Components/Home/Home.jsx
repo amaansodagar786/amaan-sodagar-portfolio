@@ -69,13 +69,12 @@ const Home = () => {
                     <h1 className='AboutTextHeading'>Brief <b>introduction</b></h1>
                     <p>
                         Hi, I'm Amaan Sodagar. and I am from Vadodara, Gujarat , India. <br /> <br />
-                        Recently I've Completed my B-Tech in CSE From parul University , Vadodara with 7.98 CGPA.
+                        Recently I've Completed my B-Tech in CSE From parul University , Vadodara with 7.61 CGPA.
                         <br /><br />
                         I've Completed my Diploma in Computer Engineering from Shree KJ Polytechnic , Bharuch with 7.98 CGPA.
                         <br /> <br />
 
-                        I'm a FULL stack web developer and currently doing an internship in V-Ex Tech Solution as Full Stack developer.
-
+                        I am a passionate Full Stack Web Developer with hands-on experience in developing dynamic web applications. I have completed an internship as a Full Stack Developer at V-Ex Tech Solutions, where I gained valuable skills in building robust solutions and collaborating in a fast-paced development environment.
                     </p>
                 </div>
                 <Tilt className='Avatar'>
