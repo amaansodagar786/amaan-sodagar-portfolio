@@ -7,6 +7,7 @@ import asistant from "../../images/asistant.png"
 import ecommerce from "../../images/ecommerce.png"
 import hroroject from "../../images/hrproject.jpg"
 import chatapp from "../../images/chatapp.jpg"
+import weather from "../../images/Weather.png"
 
 
 const Projects = () => {
@@ -25,7 +26,14 @@ const Projects = () => {
           projectPhoto={ecommerce}
           projectName="E-Commerce Website"
           githubLink="https://github.com/amaansodagar786/E-commerce"
-          liveLink="https://e-commerce-three-tawny-31.vercel.app/"
+          liveLink="https://e-commerce-three-tawny-31.vercel.app"
+        />
+
+        <ProjectBox
+          projectPhoto={weather}
+          projectName="Weather Application"
+          githubLink="https://github.com/amaansodagar786/weatherapp"
+          liveLink="https://weatherapp-kohl-two.vercel.app"
         />
 
 
@@ -39,13 +47,13 @@ const Projects = () => {
           projectPhoto={asistant}
           projectName="Assistant Application"
           githubLink="https://github.com/amaansodagar786/asistant"
-          liveLink=""
+          liveLink="https://github.com/amaansodagar786/asistant"
         />
         <ProjectBox
           projectPhoto={scan}
           projectName="Scan Application"
-          githubLink=""
-          liveLink=""
+          githubLink="https://github.com/amaansodagar786/scanshop_app"
+          liveLink="https://github.com/amaansodagar786/scanshop_app"
         />
 
 
