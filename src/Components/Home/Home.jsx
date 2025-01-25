@@ -34,7 +34,7 @@ const Home = () => {
     const handleDownload = () => {
         const link = document.createElement('a');
         link.href = process.env.PUBLIC_URL + '/Resume.pdf';
-        link.download = "Amaan's Resume";
+        link.download = "Resume - Amaan Sodagar";
         link.click();
     };
     return (
