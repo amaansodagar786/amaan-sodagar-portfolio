@@ -22,7 +22,7 @@ function App() {
   // Function to log visits
   const logVisit = async () => {
     try {
-      await fetch("https://your-backend-url.com/log-visit"); // Replace with your actual backend URL
+      await fetch("https://backnd-portfolio.vercel.app/log-visit"); 
     } catch (error) {
       console.error("Error logging visit:", error);
     }
