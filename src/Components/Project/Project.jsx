@@ -18,7 +18,7 @@ const Projects = () => {
         <ProjectBox
           projectPhoto={chatapp}
           projectName="Real-Time Chat Application"
-          githubLink="https://github.com/amaansodagar786/frontend_chat"
+          githubLink="https://chat-app-flame-zeta.vercel.app"
           liveLink="https://chat-app-flame-zeta.vercel.app"
         />
 

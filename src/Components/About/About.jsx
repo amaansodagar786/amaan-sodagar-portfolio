@@ -43,9 +43,15 @@ const About = () => {
           <p className='exp-text'>V-Ex Tech Solution</p>
           <p className='exp-text'>Jan - Apr (2024)</p>
           <p className='exp-text'>(Works on E-Commerce )</p>
+          
+        </div>
 
+        <div className='experience-box'>
 
-
+          <p className='exp-text firsttext'>Full Stack Developer</p>
+          <p className='exp-text'>Techorses</p>
+          <p className='exp-text'>Feb - Present (2025)</p>
+          <p className='exp-text'>(Mern Stack Dev)</p>
 
         </div>
 
