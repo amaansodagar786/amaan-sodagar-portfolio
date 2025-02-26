@@ -3,6 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ReactGA from "react-ga4";
+
+// Initialize Google Analytics
+ReactGA.initialize("G-8MX9EGX9JM");  // Replace with your Measurement ID
+ReactGA.send("pageview");  // Track page views
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
