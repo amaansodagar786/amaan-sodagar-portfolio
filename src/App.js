@@ -16,16 +16,29 @@ import Mycontextprovider from './Components/Context/Mycontextprovider';
 
 
 function App() {
-  const[Loading,SetLoading]=useState(true);
-  
 
-  useEffect(()=>{
-    SetLoading(true)
+  const [Loading, SetLoading] = useState(true);
 
-    setTimeout(()=>{
-    SetLoading(false)}
-    ,1900)
-  },[])  
+  // Function to log visits
+  const logVisit = async () => {
+    try {
+      await fetch("https://backnd-portfolio.vercel.app/log-visit"); 
+    } catch (error) {
+      console.error("Error logging visit:", error);
+    }
+  };
+
+  useEffect(() => {
+    SetLoading(true);
+
+    setTimeout(() => {
+      SetLoading(false);
+    }, 1900);
+
+    // Call logVisit when the app loads
+    logVisit();
+  }, []); 
+
   return (
 
     <>
