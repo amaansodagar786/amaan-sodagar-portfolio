@@ -1,14 +1,15 @@
-import React  from 'react'
+import React from 'react'
 import "./Home.scss";
 // import Avatar from '../../images/Avatar.png'
 // import { IoLogoGameControllerB } from "react-icons/io";
 import Tilt from 'react-parallax-tilt';
 import Typed from '../TypeEffect/Type';
 // import myimg from '../../images/my image.jpg'
-import mypic from '../../images/mypic.jpg'
+// import mypic from '../../images/mypic.jpg' 
+import mypic from '../../images/home.jpeg'
 import webani from '../Lottie/webdev.json'
 import Lottie from 'lottie-react';
-import { useNavigate , useLocation} from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useContext } from 'react';
 import Context from '../Context/Context';
 
@@ -19,7 +20,7 @@ const Home = () => {
 
     const Navigate = useNavigate();
     const location = useLocation();
-    const {hello} = useContext(Context);
+    const { hello } = useContext(Context);
 
 
 
@@ -27,7 +28,7 @@ const Home = () => {
         Navigate('/contact');
     };
 
-    
+
 
 
 
@@ -42,7 +43,7 @@ const Home = () => {
             <div className='HomePage'>
 
                 <div className='HomeText'>
-                     <h1>Hello!</h1>
+                    <h1>Hello!</h1>
                     <h1>I'M <b>AMAAN SODAGAR</b></h1>
                     <Typed />
                     <div className="btns">
@@ -56,9 +57,9 @@ const Home = () => {
                 </div>
 
                 <div className='illustration'>
-                    
-                        <img src={mypic} alt="" />
-                    
+
+                    <img src={mypic} alt="" />
+
                 </div>
 
             </div>
@@ -68,13 +69,13 @@ const Home = () => {
                 <div className='AboutText'>
                     <h1 className='AboutTextHeading'>Brief <b>introduction</b></h1>
                     <p>
-                        Hi, I'm Amaan Sodagar. and I am from Vadodara, Gujarat , India. <br /> <br />
-                        Recently I've Completed my B-Tech in CSE From parul University , Vadodara with 7.61 CGPA.
-                        <br /><br />
-                        I've Completed my Diploma in Computer Engineering from Shree KJ Polytechnic , Bharuch with 7.98 CGPA.
-                        <br /> <br />
+                        Hi, I'm Mohammad Amaan Sodagar, a Full Stack Web Developer from Vadodara, Gujarat, India. <br /><br />
 
-                        I am a passionate Full Stack Web Developer with hands-on experience in developing dynamic web applications. I have completed an internship as a Full Stack Developer at V-Ex Tech Solutions, where I gained valuable skills in building robust solutions and collaborating in a fast-paced development environment.
+                        Currently, I am working as a Full Stack Developer at Techorses, where I build
+                        scalable backend systems and modern, responsive web applications using the MERN stack. <br /><br />
+
+                        I also have hands-on industry experience from my internship at V-Ex Tech Solutions,
+                        where I worked on real-world projects and improved my development and problem-solving skills.
                     </p>
                 </div>
                 <Tilt className='Avatar'>

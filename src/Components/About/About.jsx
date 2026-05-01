@@ -12,15 +12,23 @@ const About = () => {
     <>
       <div className='AboutPage'>
         <div className='AboutText'>
-          <h1 className='AboutTextHeading' >Get to <b>know</b> me!</h1>
+          <h1 className='AboutTextHeading'>Get to <b>know</b> me!</h1>
           <p>
-            Hi, I'm Amaan Sodagar. and I am from Vadodara, Gujarat , India. <br /> <br />
-            I've Completed my B-Tech in CSE From parul University , Vadodara with 7.61 CGPA.
-            <br /><br />
-            I've Completed my Diploma in Computer Engineering from Shree KJ Polytechnic , Bharuch with 7.98 CGPA.
-            <br /> <br />
+            Hi, I'm Mohammad Amaan Sodagar, a passionate Full Stack Developer based in Vadodara, Gujarat, India. <br /><br />
 
-            I am a passionate Full Stack Web Developer with hands-on experience in developing dynamic web applications. I have completed an internship as a Full Stack Developer , where I gained valuable skills in building robust solutions and collaborating in a fast-paced development environment.
+            I completed my B.Tech in Computer Science from Parul University with a CGPA of 7.61,
+            and my Diploma in Computer Engineering from KJ Polytechnic, Bharuch with a CGPA of 7.98.
+            I completed my schooling under GSEB from New Sunrise School, Vadodara. <br /><br />
+
+            I have practical experience in full stack development using the MERN stack.
+            I began my journey with an internship at V-Ex Tech Solutions, where I worked on real-world applications
+            and strengthened my technical foundation. <br /><br />
+
+            Currently, I am working at Techorses as a Full Stack Developer, focusing on building efficient,
+            scalable, and user-friendly web applications. <br /><br />
+
+            My core skills include React, Node.js, Express.js, MongoDB, JavaScript, AWS, MySQL,
+            along with programming languages like C and C++.
           </p>
         </div>
 
@@ -43,7 +51,7 @@ const About = () => {
           <p className='exp-text'>V-Ex Tech Solution</p>
           <p className='exp-text'>Jan - Apr (2024)</p>
           <p className='exp-text'>(Works on E-Commerce )</p>
-          
+
         </div>
 
         <div className='experience-box'>

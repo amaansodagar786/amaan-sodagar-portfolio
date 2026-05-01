@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import './Contact.scss';
-import myimg from '../../images/Myimage.jpg';
+import myimg from '../../images/contact.jpeg';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
@@ -27,6 +27,8 @@ const Contact = () => {
 
         try {
             const response = await fetch('https://backnd-portfolio.vercel.app/contact', {
+            // const response = await fetch('http://89.116.236.84:3035/contact', {
+            // const response = await fetch('http://93.127.167.226:3035/api/contact', {
                 method: 'POST',
                 body: JSON.stringify(values),
                 headers: {
