@@ -23,12 +23,8 @@ const Contact = () => {
 
     const handleSubmit = async (values, { setSubmitting, resetForm }) => {
         setLoader(true);
-        // alert(JSON.stringify(values, null, 2)); // For debugging
-
         try {
             const response = await fetch('https://backnd-portfolio.vercel.app/contact', {
-            // const response = await fetch('http://89.116.236.84:3035/contact', {
-            // const response = await fetch('http://93.127.167.226:3035/api/contact', {
                 method: 'POST',
                 body: JSON.stringify(values),
                 headers: {
@@ -36,9 +32,7 @@ const Contact = () => {
                 },
             });
 
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
+            if (!response.ok) throw new Error('Network response was not ok');
 
             const data = await response.json();
 
@@ -58,89 +52,134 @@ const Contact = () => {
         }
     };
 
+    const socialLinks = [
+    { icon: <FaPhone />, label: '+91 8401273528', href: 'tel:+918401273528' },
+    { icon: <FaEnvelope />, label: 'sodagaramaan786@gmail.com', href: 'mailto:sodagaramaan786@gmail.com' },
+    { 
+        icon: <FaMapMarkerAlt />, 
+        label: 'Panigate, Vadodara, Gujarat', 
+        href: 'https://www.google.com/maps/place/Panigate,+Relief+Colony,+Vadodara,+Gujarat+390019/@22.2991274,73.2182147,806m/data=!3m2!1e3!4b1!4m6!3m5!1s0x395fc586f6c2ea51:0x5478f0a238ed9970!8m2!3d22.2991305!4d73.2209913!16s%2Fg%2F11bw7plwxj'
+    },
+];
+
     return (
-        <>
-            <div className="ContactPage">
-                <h1 className="ContactHeading">Contact Me</h1>
-                <div className="ContactContent">
-                    <div className="ContactImage">
-                        <img src={myimg} alt="Amaan Sodagar" />
-                    </div>
-                    <div className="ContactInfo">
-                        <ul className="SocialHandles">
-                            <li>
-                                <a href="tel:+918401273528">
-                                    <FaPhone /> +91 8401273528
-                                </a>
-                            </li>
-                            <li>
-                                <a href="mailto:sodagaramaan786@gmail.com">
-                                    <FaEnvelope /> sodagaramaan786@gmail.com
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://goo.gl/maps/your-address" target="_blank" rel="noopener noreferrer">
-                                    <FaMapMarkerAlt /> Vadodara, Gujarat
-                                </a>
-                            </li>
-                            <div className="socials">
-                                <li>
-                                    <a href="https://github.com/amaansodagar786" target="_blank" rel="noopener noreferrer">
-                                        <FaGithub />
+        <div className="contact-wrapper">
+
+            {/* Ambient blobs */}
+            <div className="blob blob--1" />
+            <div className="blob blob--2" />
+
+            <div className="contact-split">
+
+                {/* ── LEFT PANEL ── */}
+                <div className="contact-left">
+                    <div className="left-inner">
+
+                        <span className="overline">Get In Touch</span>
+                        <h1 className="lets-talk">
+                            Let's<br />
+                            <span className="stroke-text">Talk.</span>
+                        </h1>
+
+                        <p className="tagline">
+                            Got a project in mind or just want to say hi?<br />
+                            My inbox is always open.
+                        </p>
+
+                        {/* <div className="avatar-ring">
+                            <img src={myimg} alt="Amaan Sodagar" className="avatar-img" />
+                        </div> */}
+
+                        <ul className="info-list">
+                            {socialLinks.map((item, i) => (
+                                <li key={i} className="info-item">
+                                    <a href={item.href} target={item.href.startsWith('http') ? '_blank' : '_self'} rel="noopener noreferrer">
+                                        <span className="info-icon">{item.icon}</span>
+                                        <span className="info-label">{item.label}</span>
+                                        <span className="info-line" />
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="https://www.linkedin.com/in/amaan-sodagar-67b640215/" target="_blank" rel="noopener noreferrer">
-                                        <FaLinkedin />
-                                    </a>
-                                </li>
-                            </div>
+                            ))}
                         </ul>
+
+                        <div className="social-icons">
+                            <a href="https://github.com/amaansodagar786" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="GitHub">
+                                <FaGithub />
+                            </a>
+                            <a href="https://www.linkedin.com/in/amaan-sodagar-67b640215/" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="LinkedIn">
+                                <FaLinkedin />
+                            </a>
+                        </div>
+
                     </div>
                 </div>
-            </div>
-            <div className="mainform">
-                <Formik
-                    initialValues={{ name: '', email: '', message: '', mobile: '' }}
-                    validationSchema={validationSchema}
-                    onSubmit={handleSubmit}
-                >
-                    {({ isSubmitting }) => (
-                        <Form className="form_main">
-                            <p className="heading">Connect With Me</p>
-                            <div className="inputContainer">
-                                <Field type="text" name="name" className="inputField" placeholder="Name" /> <br />
-                                <ErrorMessage name="name" component="div" className="error" />
-                            </div>
-                            <div className="inputContainer">
-                                <Field type="text" name="email" className="inputField" placeholder="Email" /> <br />
-                                <ErrorMessage name="email" component="div" className="error" />
-                            </div>
-                            <div className="inputContainer">
-                                <Field type="text" name="mobile" className="inputField" placeholder="Mobile" /> <br />
-                                <ErrorMessage name="mobile" component="div" className="error" />
-                            </div>
-                            <div className="inputContainer">
-                                <Field as="textarea" name="message" className="inputField" placeholder="Message" /> <br />
-                                <ErrorMessage name="message" component="div" className="error" />
-                            </div>
-                            <button type="submit" id="button" disabled={isSubmitting || loader}>
-                                {loader ? 'Sending...' : 'Send'}
-                            </button>
-                        </Form>
-                    )}
-                </Formik>
 
-                {modalOpen && (
-                    <div className="modal">
-                        <div className="modalContent">
-                            <p>{message}</p>
-                            <button onClick={() => setModalOpen(false)}>Close</button>
+                {/* ── RIGHT PANEL ── */}
+                <div className="contact-right">
+                    <div className="form-card">
+
+                        <div className="form-card__header">
+                            <h2>Send a Message</h2>
+                            <p>I'll get back to you within 24 hours.</p>
                         </div>
+
+                        <Formik
+                            initialValues={{ name: '', email: '', message: '', mobile: '' }}
+                            validationSchema={validationSchema}
+                            onSubmit={handleSubmit}
+                        >
+                            {({ isSubmitting }) => (
+                                <Form className="contact-form">
+
+                                    <div className="field-group half">
+                                        <div className="field-wrap">
+                                            <Field type="text" name="name" className="field-input" placeholder=" " />
+                                            <label className="field-label">Your Name</label>
+                                            <ErrorMessage name="name" component="span" className="field-error" />
+                                        </div>
+                                        <div className="field-wrap">
+                                            <Field type="text" name="mobile" className="field-input" placeholder=" " />
+                                            <label className="field-label">Mobile</label>
+                                            <ErrorMessage name="mobile" component="span" className="field-error" />
+                                        </div>
+                                    </div>
+
+                                    <div className="field-wrap">
+                                        <Field type="text" name="email" className="field-input" placeholder=" " />
+                                        <label className="field-label">Email Address</label>
+                                        <ErrorMessage name="email" component="span" className="field-error" />
+                                    </div>
+
+                                    <div className="field-wrap textarea-wrap">
+                                        <Field as="textarea" name="message" className="field-input field-textarea" placeholder=" " rows={5} />
+                                        <label className="field-label">Your Message</label>
+                                        <ErrorMessage name="message" component="span" className="field-error" />
+                                    </div>
+
+                                    <button type="submit" className="submit-btn" disabled={isSubmitting || loader}>
+                                        <span className="submit-btn__text">{loader ? 'Sending...' : 'Send Message'}</span>
+                                        <span className="submit-btn__arrow">→</span>
+                                    </button>
+
+                                </Form>
+                            )}
+                        </Formik>
                     </div>
-                )}
+                </div>
+
             </div>
-        </>
+
+            {/* ── MODAL ── */}
+            {modalOpen && (
+                <div className="c-modal" onClick={() => setModalOpen(false)}>
+                    <div className="c-modal__box" onClick={e => e.stopPropagation()}>
+                        <div className="c-modal__icon">✓</div>
+                        <p className="c-modal__msg">{message}</p>
+                        <button className="c-modal__close" onClick={() => setModalOpen(false)}>Close</button>
+                    </div>
+                </div>
+            )}
+        </div>
     );
 };
 

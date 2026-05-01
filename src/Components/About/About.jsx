@@ -1,117 +1,117 @@
 import React from 'react';
 import Skills from '../About/Skills';
 import Tilt from 'react-parallax-tilt';
-import Lottie from "lottie-react"
-
+import Lottie from "lottie-react";
 import "./About.scss";
-import webani2 from '../Lottie/animation.json'
-
+import webani2 from '../Lottie/animation.json';
 
 const About = () => {
   return (
-    <>
-      <div className='AboutPage'>
-        <div className='AboutText'>
-          <h1 className='AboutTextHeading'>Get to <b>know</b> me!</h1>
-          <p>
-            Hi, I'm Mohammad Amaan Sodagar, a passionate Full Stack Developer based in Vadodara, Gujarat, India. <br /><br />
+    <div className='about-wrapper'>
 
-            I completed my B.Tech in Computer Science from Parul University with a CGPA of 7.61,
-            and my Diploma in Computer Engineering from KJ Polytechnic, Bharuch with a CGPA of 7.98.
+      {/* Blobs */}
+      <div className="blob blob--1" />
+      <div className="blob blob--2" />
+
+      {/* ── HERO ── */}
+      <section className='about-hero'>
+        <div className='about-text'>
+          <span className='about-overline'>Who I Am</span>
+          <h1 className='about-heading'>
+            Get to <span className='stroke-text'>Know</span> Me!
+          </h1>
+          <p className='about-bio'>
+            Hi, I'm <strong>Mohammad Amaan Sodagar</strong>, a passionate Full Stack Developer
+            based in Vadodara, Gujarat, India. <br /><br />
+            I completed my B.Tech in Computer Science from Parul University (CGPA 7.61),
+            and my Diploma in Computer Engineering from KJ Polytechnic, Bharuch (CGPA 7.98).
             I completed my schooling under GSEB from New Sunrise School, Vadodara. <br /><br />
-
             I have practical experience in full stack development using the MERN stack.
-            I began my journey with an internship at V-Ex Tech Solutions, where I worked on real-world applications
-            and strengthened my technical foundation. <br /><br />
-
-            Currently, I am working at Techorses as a Full Stack Developer, focusing on building efficient,
-            scalable, and user-friendly web applications. <br /><br />
-
+            I began my journey with an internship at V-Ex Tech Solutions, and currently work at
+            <strong> Techorses</strong> as a Full Stack Developer, building efficient, scalable,
+            and user-friendly web applications. <br /><br />
             My core skills include React, Node.js, Express.js, MongoDB, JavaScript, AWS, MySQL,
-            along with programming languages like C and C++.
+            along with C and C++.
           </p>
         </div>
+        <div className='about-lottie'>
+          <Tilt>
+            <Lottie animationData={webani2} />
+          </Tilt>
+        </div>
+      </section>
 
-        <div>
-          <div className='animation'>
-            <Tilt>
-              <Lottie animationData={webani2} />
-            </Tilt>
+      {/* ── EXPERIENCE ── */}
+      <section className='about-section'>
+        <div className='section-header'>
+          <span className='about-overline'>Where I've Worked</span>
+          <h2 className='section-heading'>Experience</h2>
+        </div>
+        <div className='experience-grid'>
+          <div className='info-card'>
+            <span className='info-card__role'>Full Stack Developer (Intern)</span>
+            <span className='info-card__company'>V-Ex Tech Solution</span>
+            <span className='info-card__period'>Jan - Apr 2024</span>
+            <span className='info-card__note'>Works on E-Commerce</span>
+          </div>
+          <div className='info-card'>
+            <span className='info-card__role'>Full Stack Developer</span>
+            <span className='info-card__company'>Techorses</span>
+            <span className='info-card__period'>Feb 2025 - Present</span>
+            <span className='info-card__note'>MERN Stack Dev</span>
           </div>
         </div>
+      </section>
 
-      </div>
-      <h1 className='SkillsHeading'>Experience</h1>
-      <div className='experience'>
-
-
-        <div className='experience-box'>
-
-          <p className='exp-text firsttext'>Full Stack Developer</p>
-          <p className='exp-text'>V-Ex Tech Solution</p>
-          <p className='exp-text'>Jan - Apr (2024)</p>
-          <p className='exp-text'>(Works on E-Commerce )</p>
-
+      {/* ── SKILLS ── */}
+      <section className='about-section'>
+        <div className='section-header'>
+          <span className='about-overline'>Tech Stack</span>
+          <h2 className='section-heading'>Professional Skills</h2>
         </div>
-
-        <div className='experience-box'>
-
-          <p className='exp-text firsttext'>Full Stack Developer</p>
-          <p className='exp-text'>Techorses</p>
-          <p className='exp-text'>Feb - Present (2025)</p>
-          <p className='exp-text'>(Mern Stack Dev)</p>
-
+        <div className='skills-grid'>
+          <Skills skill='React' />
+          <Skills skill='Node' />
+          <Skills skill='MongoDb' />
+          <Skills skill='Express' />
+          <Skills skill='Javascript' />
+          <Skills skill='C++' />
+          <Skills skill='Java' />
+          <Skills skill='Html' />
+          <Skills skill='css' />
         </div>
+      </section>
 
-      </div>
-      <h1 className='SkillsHeading'>Professional Skills</h1>
-      <div className='skills'>
-
-
-        <Skills skill='React' />
-        <Skills skill='Node' />
-        <Skills skill='MongoDb' />
-        <Skills skill='Express' />
-
-        <Skills skill='Javascript' />
-        <Skills skill='C++' />
-        <Skills skill='Java' />
-
-        <Skills skill='Html' />
-        <Skills skill='css' />
-      </div>
-
-      <h1 className='SkillsHeading'>Education</h1>
-      {/* <div className="maineducation"> */}
-      <div className='education'>
-        <div className='education-box'>
-          <p className='edu-text firsttext'>Parul University</p>
-          <p className='edu-text'>B-tech Computer Science</p>
-          <p className='edu-text'>CGPA - 7.61 </p>
-          <p className='edu-text'>2021 - 2024</p>
+      {/* ── EDUCATION ── */}
+      <section className='about-section'>
+        <div className='section-header'>
+          <span className='about-overline'>Academic Background</span>
+          <h2 className='section-heading'>Education</h2>
         </div>
-
-
-
-        <div className='education-box'>
-          <p className='edu-text firsttext'>Shree KJ Polytechnic</p>
-          <p className='edu-text'>Diploma in Computer Engineering</p>
-          <p className='edu-text'>CGPA - 7.98</p>
-          <p className='edu-text'>2018 - 2021</p>
+        <div className='education-grid'>
+          <div className='info-card'>
+            <span className='info-card__role'>Parul University</span>
+            <span className='info-card__company'>B.Tech — Computer Science</span>
+            <span className='info-card__period'>2021 - 2024</span>
+            <span className='info-card__note'>CGPA 7.61</span>
+          </div>
+          <div className='info-card'>
+            <span className='info-card__role'>Shree KJ Polytechnic</span>
+            <span className='info-card__company'>Diploma - Computer Engineering</span>
+            <span className='info-card__period'>2018 - 2021</span>
+            <span className='info-card__note'>CGPA 7.98</span>
+          </div>
+          <div className='info-card'>
+            <span className='info-card__role'>New Sunrise School</span>
+            <span className='info-card__company'>GSEB - SSC</span>
+            <span className='info-card__period'>Passing Year 2018</span>
+            <span className='info-card__note'>69%</span>
+          </div>
         </div>
+      </section>
 
+    </div>
+  );
+};
 
-
-        <div className='education-box'>
-          <p className='edu-text firsttext'>New Sunrise School</p>
-          <p className='edu-text'>GSEB</p>
-          <p className='edu-text'>Passing Year - 2018</p>
-          <p className='edu-text'>SSC - 69%</p>
-        </div>
-      </div>
-
-    </>
-  )
-}
-
-export default About
+export default About;
