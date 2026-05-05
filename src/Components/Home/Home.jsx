@@ -18,7 +18,7 @@ const Home = () => {
 
     const logResumeDownload = async () => {
         try {
-            await fetch("https://backnd-portfolio.vercel.app/log-resume-download", {
+            await fetch("https://backnd-portfolio.onrender.com/log-resume-download", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({

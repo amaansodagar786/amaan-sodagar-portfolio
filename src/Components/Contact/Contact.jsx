@@ -24,7 +24,7 @@ const Contact = () => {
     const handleSubmit = async (values, { setSubmitting, resetForm }) => {
         setLoader(true);
         try {
-            const response = await fetch('https://backnd-portfolio.vercel.app/contact', {
+            const response = await fetch('https://backnd-portfolio.onrender.com/contact', {
                 method: 'POST',
                 body: JSON.stringify(values),
                 headers: {
