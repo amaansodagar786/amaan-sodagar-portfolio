@@ -4,11 +4,11 @@ import './Contact.scss';
 import myimg from '../../images/contact.jpeg';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
     const [loader, setLoader] = useState(false);
-    const [modalOpen, setModalOpen] = useState(false);
-    const [message, setMessage] = useState('');
 
     const validationSchema = Yup.object({
         name: Yup.string().required('Required'),
@@ -37,15 +37,34 @@ const Contact = () => {
             const data = await response.json();
 
             if (data.success) {
-                setModalOpen(true);
-                setMessage(data.message);
+                toast.success(data.message || 'Message sent successfully!', {
+                    position: 'top-right',
+                    autoClose: 4000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                });
                 resetForm();
             } else {
-                setModalOpen(true);
-                setMessage(data.error);
+                toast.error(data.error || 'Something went wrong. Please try again.', {
+                    position: 'top-right',
+                    autoClose: 4000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                });
             }
         } catch (error) {
-            alert(`Failed to submit form: ${error.message}`);
+            toast.error('Failed to send message. Please try again later.', {
+                position: 'top-right',
+                autoClose: 4000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+            });
         } finally {
             setLoader(false);
             setSubmitting(false);
@@ -53,17 +72,29 @@ const Contact = () => {
     };
 
     const socialLinks = [
-    { icon: <FaPhone />, label: '+91 8401273528', href: 'tel:+918401273528' },
-    { icon: <FaEnvelope />, label: 'sodagaramaan786@gmail.com', href: 'mailto:sodagaramaan786@gmail.com' },
-    { 
-        icon: <FaMapMarkerAlt />, 
-        label: 'Panigate, Vadodara, Gujarat', 
-        href: 'https://www.google.com/maps/place/Panigate,+Relief+Colony,+Vadodara,+Gujarat+390019/@22.2991274,73.2182147,806m/data=!3m2!1e3!4b1!4m6!3m5!1s0x395fc586f6c2ea51:0x5478f0a238ed9970!8m2!3d22.2991305!4d73.2209913!16s%2Fg%2F11bw7plwxj'
-    },
-];
+        { icon: <FaPhone />, label: '+91 8401273528', href: 'tel:+918401273528' },
+        { icon: <FaEnvelope />, label: 'sodagaramaan786@gmail.com', href: 'mailto:sodagaramaan786@gmail.com' },
+        {
+            icon: <FaMapMarkerAlt />,
+            label: 'Panigate, Vadodara, Gujarat',
+            href: 'https://www.google.com/maps/place/Panigate,+Relief+Colony,+Vadodara,+Gujarat+390019/@22.2991274,73.2182147,806m/data=!3m2!1e3!4b1!4m6!3m5!1s0x395fc586f6c2ea51:0x5478f0a238ed9970!8m2!3d22.2991305!4d73.2209913!16s%2Fg%2F11bw7plwxj'
+        },
+    ];
 
     return (
         <div className="contact-wrapper">
+
+            {/* Toast Container */}
+            <ToastContainer
+                position="top-right"
+                autoClose={4000}
+                hideProgressBar={false}
+                newestOnTop
+                closeOnClick
+                pauseOnHover
+                draggable
+                theme="dark"
+            />
 
             {/* Ambient blobs */}
             <div className="blob blob--1" />
@@ -71,7 +102,7 @@ const Contact = () => {
 
             <div className="contact-split">
 
-                {/* ── LEFT PANEL ── */}
+                {/* LEFT PANEL */}
                 <div className="contact-left">
                     <div className="left-inner">
 
@@ -85,10 +116,6 @@ const Contact = () => {
                             Got a project in mind or just want to say hi?<br />
                             My inbox is always open.
                         </p>
-
-                        {/* <div className="avatar-ring">
-                            <img src={myimg} alt="Amaan Sodagar" className="avatar-img" />
-                        </div> */}
 
                         <ul className="info-list">
                             {socialLinks.map((item, i) => (
@@ -114,7 +141,7 @@ const Contact = () => {
                     </div>
                 </div>
 
-                {/* ── RIGHT PANEL ── */}
+                {/* RIGHT PANEL */}
                 <div className="contact-right">
                     <div className="form-card">
 
@@ -168,17 +195,6 @@ const Contact = () => {
                 </div>
 
             </div>
-
-            {/* ── MODAL ── */}
-            {modalOpen && (
-                <div className="c-modal" onClick={() => setModalOpen(false)}>
-                    <div className="c-modal__box" onClick={e => e.stopPropagation()}>
-                        <div className="c-modal__icon">✓</div>
-                        <p className="c-modal__msg">{message}</p>
-                        <button className="c-modal__close" onClick={() => setModalOpen(false)}>Close</button>
-                    </div>
-                </div>
-            )}
         </div>
     );
 };
