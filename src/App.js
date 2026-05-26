@@ -22,7 +22,7 @@ function App() {
   // Function to log visits
   const logVisit = async () => {
     try {
-      await fetch("https://backnd-portfolio.onrender.com/log-visit"); 
+      await fetch("https://amaan-sodagar-backend-portfolio.onrender.com/log-visit"); 
     } catch (error) {
       console.error("Error logging visit:", error);
     }
