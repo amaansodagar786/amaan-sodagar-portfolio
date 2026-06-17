@@ -2,12 +2,12 @@ import React from 'react';
 import './Project.scss';
 
 import ProjectBox from './Projectbox';
-import scan from "../../images/scan.png";
-import asistant from "../../images/asistant.png";
-import ecommerce from "../../images/ecommerce.png";
-import hroroject from "../../images/hrproject.jpg";
-import chatapp from "../../images/chatapp.jpg";
-import weather from "../../images/Weather.png";
+import scan from "../../images/scan_app.png";
+import asistant from "../../images/virtul_app.png";
+import ecommerce from "../../images/e_commerce.png";
+import hroroject from "../../images/hr_manage.png";
+import chatapp from "../../images/realtime_chat.png";
+import weather from "../../images/Weather_app.png";
 
 const Projects = () => {
   return (
