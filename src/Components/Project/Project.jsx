@@ -1,6 +1,7 @@
 import React from 'react';
 import './Project.scss';
 
+
 import ProjectBox from './Projectbox';
 import scan from "../../images/scan_app.png";
 import asistant from "../../images/virtual_app.png";
