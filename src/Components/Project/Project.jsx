@@ -1,13 +1,7 @@
 import React from 'react';
 import './Project.scss';
 
-import ProjectBox from './Projectbox';
-import scan from "../../images/scan_app.png";
-import asistant from "../../images/virtual_app.png";
-import ecommerce from "../../images/e_commerce.png";
-import hroroject from "../../images/hr_manage.png";
-import chatapp from "../../images/realtime_chat.png";
-import weather from "../../images/weather_app.png";
+
 
 const Projects = () => {
   return (
